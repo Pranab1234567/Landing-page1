@@ -316,14 +316,15 @@
     .n{display:flex;}
     .f{display:flex;}
 
-  #faq {
+
+      #faq {
     padding: 2em 1em;
-    background-color:#fff;
+    background-color: #f5f5f5;
     text-align: center;
     }
     
     #faq h2 {
-    font-size: 2em;
+    font-size: 1.5em; /* Decreased the font size */
     margin-bottom: 1em;
     }
     
@@ -336,16 +337,21 @@
     
     .faq-box {
     flex: 1 1 calc(50% - 1em);
-    background-color:#fff;
-    color: #000;
     padding: 1em;
     border-radius: 5px;
     box-sizing: border-box;
     text-align: left;
+    font-size: 0.9em; /* Decreased the font size */
     }
     
-    .faq-box.red {
-    background-color: #ff5555 ;
+    .faq-box:nth-child(odd) {
+    background-color: #f00;
+    color: #fff;
+    }
+    
+    .faq-box:nth-child(even) {
+    background-color: #fff;
+    color: #000;
     }
     
     .faq-box h3 {
@@ -359,9 +365,13 @@
     @media (max-width: 768px) {
     .faq-box {
     flex: 1 1 100%;
+    font-size: 0.8em; /* Decreased the font size for mobile */
+    }
+    
+    #faq h2 {
+    font-size: 1.2em; /* Decreased the font size for mobile */
     }
     }
-   
 
 
 
