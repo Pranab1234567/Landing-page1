@@ -156,32 +156,56 @@
     #hero {
     flex-direction: column;
     text-align: center;
-    padding: 1em;
     }
     
     #hero .content {
     max-width: 100%;
-    margin-bottom: 1em;
+    padding-left: 0;
     }
     
     #hero h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     }
     
     #hero p {
-    font-size: 1em;
+    font-size: 0.9em;
     }
     
     .hero-buttons {
     flex-direction: column;
     align-items: center;
-    gap: 0.5em;
+    }
+    
+    .hero-buttons .get-started-btn,
+    .hero-buttons .watch-video-btn {
+    width: 100%;
+    padding: 0.5em 1em;
     }
     
     .hero-image {
-    width: 100%;
+    display: none;
     }
     }
+    
+    @media (min-width: 769px) and (max-width: 1200px) {
+    #hero h1 {
+    font-size: 2.2em;
+    }
+    
+    #hero p {
+    font-size: 0.95em;
+    }
+    
+    .hero-buttons .get-started-btn,
+    .hero-buttons .watch-video-btn {
+    padding: 0.8em 1.5em;
+    }
+    
+    #hero .content {
+    padding-left: 50px;
+    }
+    }
+    
     
     
     #additional-image {
