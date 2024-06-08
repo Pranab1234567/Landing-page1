@@ -317,7 +317,7 @@
     .f{display:flex;}
 
 
-      #faq {
+         #faq {
     padding: 2em 1em;
     background-color: #f5f5f5;
     text-align: center;
@@ -337,32 +337,25 @@
     
     .faq-box {
     flex: 1 1 calc(50% - 1em);
-    padding: 1em;
+    padding: 0.5em; /* Reduced the padding */
     border-radius: 5px;
     box-sizing: border-box;
     text-align: left;
     font-size: 0.9em; /* Decreased the font size */
+    height: auto; /* Reduced the height */
+    width: calc(50% - 1em); /* Increased the width */
     }
     
-    .faq-box:nth-child(odd) {
+    .faq-box.red {
     background-color: #f00;
     color: #fff;
     }
     
-    .faq-box:nth-child(even) {
+    .faq-box.white {
     background-color: #fff;
     color: #000;
     }
-    .faq-box red1{background-color: #fff;
-    color: #000;}
-    .faq-box1{}
-    .faq-box red1{background-color: #fff;
-    color: #000; }
-    .faq-box1{}
-        
- .faq-box.red {
-  background-color: #ff5555 ;
-  }
+    
     .faq-box h3 {
     margin-top: 0;
     }
@@ -375,13 +368,13 @@
     .faq-box {
     flex: 1 1 100%;
     font-size: 0.8em; /* Decreased the font size for mobile */
+    width: 100%; /* Adjusted width for mobile */
     }
     
     #faq h2 {
     font-size: 1.2em; /* Decreased the font size for mobile */
     }
     }
-
 
 
         
@@ -715,28 +708,28 @@
     <h3>The Best Financial Accounting App Ever!</h3>
     <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit id Accumsan, Ultricies in Uttrices Malesuada Ellt Mauris.</p>
     </div>
-    <div class="faq-box">
+    <div class="faq-box white">
     <h3>The Best Financial Accounting App Ever!</h3>
     <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit id Accumsan, Ultricies in Uttrices Malesuada Ellt Mauris.</p>
     </div>
-    <div class="faq-box red1">
+    <div class="faq-box white">
     <h3>The Best Financial Accounting App Ever!</h3>
     <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit id Accumsan, Ultricies in Uttrices Malesuada Ellt Mauris.</p>
     </div>
-    <div class="faq-box1">
+    <div class="faq-box red">
     <h3>The Best Financial Accounting App Ever!</h3>
     <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit id Accumsan, Ultricies in Uttrices Malesuada Ellt Mauris.</p>
     </div>
-    <div class="faq-box red2">
+    <div class="faq-box red">
     <h3>The Best Financial Accounting App Ever!</h3>
     <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit id Accumsan, Ultricies in Uttrices Malesuada Ellt Mauris.</p>
     </div>
-    <div class="faq-box2">
+    <div class="faq-box white">
     <h3>The Best Financial Accounting App Ever!</h3>
     <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit id Accumsan, Ultricies in Uttrices Malesuada Ellt Mauris.</p>
     </div>
     </div>
-   </section>
+    </section>
 
 
 
