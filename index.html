@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+    
+    /* General styles */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: #fff;
+    }
+    
+    header {
+    background: #006A6A;
+    color: #FFFCF6;
+    padding: 1em 0;
+    }
+    
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: relative;
+    }
+    
+    .logo-container {
+    display: flex;
+    align-items: center;
+    }
+    
+    .logo-img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    margin-right: 10px; /* Space between image and text */
+    }
+    
+    nav .logo {
+    font-size: 1.5em;
+    }
+    
+    nav .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    }
+    
+    nav .menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background: #FFFCF6;
+    border-radius: 3px;
+    }
+    
+    nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+    }
+    
+    nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    nav .download-btn {
+    background: #f00;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    
+  #hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 1em;
+  background-color:;
+  color:black;
+  }
+  
+  #hero .content {
+  max-width: 50%;
+  }
+  
+  #hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  }
+  
+  #hero p {
+  font-size: 1.2em;
+  margin: 1em 0;
+  }
+  
+  .hero-buttons {
+  display: flex;
+  gap: 1em;
+  }
+  
+  .hero-buttons .get-started-btn,
+  .hero-buttons .watch-video-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  }
+  
+  .hero-image img {
+  max-width: 100%;
+  height: auto;
+  }
+  
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+    #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    }
+    
+    #hero .content {
+    max-width: 100%;
+    margin-bottom: 1em;
+    }
+    
+    #hero h1 {
+    font-size: 1.8em;
+    }
+    
+    #hero p {
+    font-size: 1em;
+    }
+    
+    .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    }
+    
+    .hero-image {
+    width: 100%;
+    }
+    }
+    
+    
+    #additional-image {
+    padding: 2em 1em;
+    text-align: center;
+    }
+    
+    #additional-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+    nav .menu-toggle {
+    display: flex;
+    }
+    
+    nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #000;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    }
+    
+    nav .nav-links.nav-open {
+    display: flex;
+    }
+    
+    nav .nav-links li {
+    margin: 1em 0;
+    }
+    
+    nav .download-btn {
+    display: none;
+    }
+    
+    
+    }
+    .image-container {
+    position: relative;
+    display:inline-block ;
+    }
+    
+    .blur-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px; /* Adjust width */
+    height: 200px; /* Adjust height */
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.7), rgba(255, 255, 0, 0.7));
+    filter: blur(20px); /* Adjust the blur amount */
+    border-radius: 50%; /* Optional for rounded shape */
+    z-index: -1;
+    }
+    
+    
+    
+    .image-container img {
+    width: 300px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    }
+    /*
+    .section {
+    padding: 50px 20px;
+    }
+    .features, .advantages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    }
+    .text-content {
+    flex: 1;
+    padding: 20px;
+    z-index: 1;
+    }
+    .text-content h2 {
+    font-size: 2.5em;
+    color: #e63946;
+    margin-bottom: 20px;
+    }
+    .text-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    }
+  
+    img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    
+    }
+    @media (max-width: 768px) {
+    .features, .advantages {
+    flex-direction: column;
+    }
+    .gradient-left, .gradient-right {
+    display: none;
+    }
+    .text-content {
+    text-align: center;
+    }
+    }
+    */
+    
+    .section {
+    padding: 50px 20px;
+    }
+    .features, ..advantages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    }
+    .text-content {
+    flex: 1;
+    padding: 20px;
+    z-index: 1;
+    }
+    .text-content h2 {
+    font-size: 2em;
+    color: #e63946;
+    margin-bottom: 20px;
+    }
+    .text-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    }
+    .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    .feature-item img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    }
+    .feature-item p {
+    margin: 0;
+    }
+    .image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .blur-gradient {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  /*  background: linear-gradient(135deg, rgba(255, 0, 0, 0.7), rgba(255, 255, 0, 0.7));*/
+   background: radial-gradient(circle, rgba(255,223,95,1) 0%, rgba(255,94,58,1) 100%);
+    z-index: -1;
+    filter: blur(40px);
+    left: -100px;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    }
+    img:hover {
+    transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+    .features {
+    flex-direction: column;
+    }
+    .blur-gradient {
+    display: ;
+    }
+    .text-content {
+    text-align: center;
+    }
+    }
+    
+    .features section h2{text-align:center;}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .head h2{text-align:center;font-size: 2em;
+    color: #e63946;
+    margin-bottom: 20px;}
+    .head h4{text-align:center;}
+    .n{display:flex;}
+    .f{display:flex;}
+    
+    
+    
+    
+    
+    
+    footer {
+    background: #fff;
+    color: #000;
+    padding: 2em 1em;
+    text-align: center;
+    }
+    
+    footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #444;
+    }
+    
+    footer .footer-content div {
+    flex: 1;
+    }
+    
+    footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    }
+    
+    footer .footer-links ul li {
+    margin: 0.5em 0;
+    }
+    
+    footer .footer-links ul li a {
+    color: #000;
+    text-decoration: none;
+    }
+    
+    footer .footer-newsletter input {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    }
+    
+    footer .footer-newsletter button {
+    background: #f00;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    
+    footer p {
+    margin: 1em 0 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+    <div class="logo-container">
+    <img src="/storage/emulated/0/Download/Jb1Dle4.png" alt="Logo" class="logo-img">
+    <div class="logo">Uifry</div>
+    </div>
+    <button class="menu-toggle" aria-label="Open Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    </button>
+    <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#features">Features</a></li>
+    </ul>
+    <button class="download-btn">Download</button>
+    </nav>
+    </header>
+    
+
+    <section id="hero">
+        <div class="content">
+        <div class="image-container">
+        <div class="blur-gradient"></div>
+            <h1>Make The Best Financial Decisions</h1>
+            <p>Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+            </div>
+            <div class="hero-buttons">
+                <button class="get-started-btn">Get Started</button>
+                <button class="watch-video-btn">Watch Video</button>
+            </div>
+            <img src="/storage/emulated/0/Download/JbE3pDu.png">
+        </div>
+        <div class="hero-image">
+        <div class="image-container">
+        <div class="blur-gradient"></div>
+        <img src="/storage/emulated/0/Download/JbtIcFe.png" alt="Your Image">
+        </div>
+            <img src="/storage/emulated/0/Download/JbE3pDu.png" style="margin-left:260px;">
+        </div>
+    </section>
+
+    <section id="additional-image">
+        <img src="/storage/emulated/0/Download/JbbRWmu.png" alt="Additional Graphic">
+    </section>
+    
+    
+    <section class="features section">
+    <div class="head">
+    <h2>Uifry Premium</h2></div>
+    <div class="intro-image">
+    <img src="/storage/emulated/0/Download/JbE3pDu.png" alt="Intro Image">
+    </div>
+    <div class="image-container">
+    <div class="blur-gradient"></div>
+    <img src="/storage/emulated/0/Download/JbtnjYx.png" alt="Phone Image">
+    </div>
+    <div class="text-content">
+    
+    <div class="feature-item">
+    <img src="/storage/emulated/0/Download/JmfXMpR.png" alt="Icon">
+    <p><strong>Budgeting Intervals</strong></p>
+    </div>
+    <p>Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+    <div class="feature-item">
+    <img src="/storage/emulated/0/Download/Jmfjs5b.png" alt="Icon">
+    <p><strong>Budgeting Intervals</strong></p>
+    </div>
+    <p>Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+    <div class="feature-item">
+    <img src="/storage/emulated/0/Download/JbMCGAQ.png" alt="Icon">
+    <p><strong>Budgeting Intervals</strong></p>
+    </div>
+    <p>Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+    </div>
+    <img src="/storage/emulated/0/Download/JbE3pDu.png" style="margin-left:260px;">
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section class="advantages section">
+    <div class="text-content">
+    <h2>Why Choose Uifry?</h2>
+    <div class="n">
+    <img src="/storage/emulated/0/Download/JmfOrqN.png">
+    <p><strong>Clever Notifications</strong></p>
+    </div>
+    <p>Arcu At Dtium Sapien, Mollis. Vulputate Sit Id Aouam, Ultrices, In Ultrices Malesuada Elit Mauris Etiam Odio. Duis Tristique Lacus, Et Blandit Vivrras Nisi Velit. Sed Mattis Rhoucus, Diam Suspendisse Sit Nunc, Gravida Eu. Lectus Eget Eget Ac Dolor Neque Lorem Sapion, Suspendisse Aliquam.</p>
+    </div>
+    <div class="image-container">
+    <div class="blur-gradient"></div>
+    
+    <img src="/storage/emulated/0/Download/JbtzF1e.png" alt="Phone Image">
+    </div>
+    <img src="/storage/emulated/0/Download/JbE3pDu.png" style="margin-left:px;">
+    </section>
+    
+    
+    <section class="features section">
+    <h2 style="color:#e63946">Fully Customizable</h2>
+    <div class="image-container">
+    <div class="blur-gradient"></div>
+    
+    <img src="/storage/emulated/0/Download/JbtnjYx.png" alt="Phone Image">
+    </div>
+    <div class="text-content">
+    
+    
+    <p>Arcu At Dictum Sapien, Mollis. Vulputate Sit Id Accumsan, Ultricies. In Ultrices Malesuada Elit Mauris Etiam Odio. Duis Tristique Lacus, Et Blandit Viverra Nisl Velit. Sed Mattis Rhoncus, Diam Suspendisse Sit Nuno, Gravida Eu. Lectus Eget Eget Ac Dolor Neque Lorem Sapien, Suspendisse Aliquam.</p>
+    
+    </div>
+    <img src="/storage/emulated/0/Download/JbE3pDu.png" style="margin-left:260px;">
+    </section>
+    
+    
+    <div class="head">
+    <h4>TESTIMONIAL</h4>
+    <h2> Say AboutUs?</h2>
+    </div>
+    <section class="features section">
+    
+    <div class="image-container">
+    <div class="blur-gradient"></div>
+    
+    <img src="/storage/emulated/0/Download/JbtFh22.png" alt="Phone Image">
+    </div>
+    <div class="text-content">
+    <h4>The Best Financial Accounting App Ever!</h4>
+    
+    <p>Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam.</p>
+    
+    </div>
+    <img src="/storage/emulated/0/Download/JbE3pDu.png" style="margin-left:0px;">
+    </section>
+    
+    <footer>
+    <div class="footer-content">
+    <div class="footer-links">
+    <h3>Links</h3>
+    <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    </ul>
+    </div>
+    <div class="footer-newsletter">
+    <h3>Newsletter</h3>
+    <input type="email" placeholder="Subscribe">
+    <button>Subscribe</button>
+    </div>
+    </div>
+    <p>&copy; 2024 Uifry. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('nav-open');
+    });
+    });
+    </script>
+</body>
+</html>
