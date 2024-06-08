@@ -318,6 +318,64 @@
     
     
     
+    .rect-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em 0;
+    }
+    
+    .text-content {
+    max-width: 50%;
+    }
+    
+    .text-content h2 {
+    margin-bottom: 0.5em;
+    }
+    
+    .text-content p {
+    margin-bottom: 1em;
+    }
+    
+    .download-btn {
+    background: #f00; /* Red background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    
+    .image-content {
+    max-width: 40%;
+    }
+    
+    .image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    }
+    
+    @media (max-width: 768px) {
+    .rect-box {
+    flex-direction: column;
+    text-align: center;
+    }
+    
+    .text-content,
+    .image-content {
+    max-width: 100%;
+    }
+    
+    .image-content img {
+    margin-top: 1em;
+    }
+    }
+    
     
     
     
@@ -534,6 +592,25 @@
     </div>
     
     </section>
+
+
+
+
+
+
+   <div class="rect-box">
+    <div class="text-content">
+    <h2>Heading</h2>
+    <p>Small paragraph text goes here. Describe your content briefly.</p>
+    <button class="download-btn">Download</button>
+    </div>
+    <div class="image-content">
+    <img src="Group1000004741.png" alt="Description of Image">
+    </div>
+    </div>
+
+
+
     
     <footer>
     <div class="footer-content">
