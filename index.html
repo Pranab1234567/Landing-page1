@@ -608,6 +608,73 @@ padding-top:30px;
     text-align: center;
     }
     }
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+    
+    @keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+    }
+    
+    #hero h1 {
+    animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    #hero p {
+    animation: fadeIn 2s ease-in-out;
+    }
+    
+    .hero-buttons .get-started-btn,
+    .hero-buttons .watch-video-btn {
+    animation: fadeIn 2.5s ease-in-out;
+    }
+    
+    #hero .image-container img,
+    #hero .hero-image img {
+    animation: fadeIn 3s ease-in-out;
+    }
+    
+    #hero .content {
+    animation: slideInLeft 1.5s ease-in-out;
+    }
+    
+    #hero .hero-image {
+    animation: slideInRight 1.5s ease-in-out;
+    }
+    
+   
+    #hero p {
+    animation-delay: 1.5s;
+    }
+    
+    .hero-buttons .get-started-btn {
+    animation-delay: 1s;
+    }
+    
+    .hero-buttons .watch-video-btn {
+    animation-delay: 1.5s;
+    }
+    
+    #hero .image-container img {
+    animation-delay: 2s;
+    }
+
+
+
+
+
+
+
+        
     </style>
 </head>
 <body>
